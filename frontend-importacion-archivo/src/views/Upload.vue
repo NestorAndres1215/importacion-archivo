@@ -4,20 +4,12 @@
 
     <!-- Formulario de subida -->
     <div class="mb-3 d-flex align-items-center gap-2">
-      <input
-        type="file"
-        class="form-control"
-        @change="handleFileUpload"
-      />
-      <button
-        class="btn btn-primary"
-        @click="uploadFile"
-        :disabled="!selectedFile"
-      >
+      <input type="file" class="form-control" @change="handleFileUpload" />
+      <button class="btn btn-primary" @click="uploadFile" :disabled="!selectedFile">
         <i class="fas fa-upload me-1"></i> Subir Archivo
       </button>
       <span v-if="selectedFile" class="text-truncate">
-        📄 {{ selectedFile.name }}
+        {{ selectedFile.name }}
       </span>
     </div>
   </div>
@@ -66,16 +58,20 @@ export default {
 .mb-3 {
   margin-bottom: 1rem;
 }
+
 .gap-2 {
   gap: 0.5rem;
 }
+
 .form-control {
   border-radius: 0.5rem;
 }
+
 .btn-primary {
   display: flex;
   align-items: center;
 }
+
 .text-truncate {
   max-width: 200px;
   overflow: hidden;
