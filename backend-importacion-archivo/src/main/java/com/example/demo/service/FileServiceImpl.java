@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.exception.FileEmptyException;
 import com.example.demo.exception.FileTypeNotAllowedException;
 import com.example.demo.model.FileModel;
 import com.example.demo.repository.FileRepository;
@@ -36,10 +35,6 @@ public class FileServiceImpl implements FileService {
     @Transactional
     public FileModel saveFile(MultipartFile file) throws IOException {
 
-        if (file.isEmpty()) {
-            throw new FileEmptyException(MensajesValidacion.ERROR_ARCHIVO_VACIO);
-        }
-
         String fileType = file.getContentType();
         if (!ALLOWED_TYPES.contains(fileType)) {
             throw new FileTypeNotAllowedException(MensajesValidacion.ERROR_TIPO_NO_SOPORTADO + fileType);
@@ -68,10 +63,6 @@ public class FileServiceImpl implements FileService {
     @Override
     @Transactional
     public boolean deleteFileById(Long id) throws FileNotFoundException {
-        if (!fileRepository.existsById(id)) {
-            throw new FileNotFoundException(MensajesValidacion.ERROR_ARCHIVO_NO_ENCONTRADO + id);
-        }
-
         fileRepository.deleteById(id);
         return false;
     }

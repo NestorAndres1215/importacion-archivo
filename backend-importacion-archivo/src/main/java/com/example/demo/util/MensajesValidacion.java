@@ -7,5 +7,4 @@ public class MensajesValidacion {
     public static final String ERROR_ARCHIVO_VACIO = "El archivo está vacío.";
     public static final String ERROR_TIPO_NO_SOPORTADO = "Tipo de archivo no soportado: ";
     public static final String ERROR_ARCHIVO_NO_ENCONTRADO = "No se encontró el archivo con ID: ";
-
 }
