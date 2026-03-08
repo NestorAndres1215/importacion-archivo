@@ -138,7 +138,6 @@ export default {
 <style scoped>
 .file-title {
   color: #0b2545;
-  /* Azul marino */
   font-weight: 700;
   font-size: 2.5rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -147,6 +146,5 @@ export default {
 
 .table-header-custom {
   background-color: #0b2545;
-  /* Azul marino igual al título */
 }
 </style>

@@ -247,7 +247,6 @@ export default {
   margin-top: 0.75rem;
 }
 
-/* Spinner bootstrap-like (puedes usar bootstrap o solo css) */
 .spinner-border {
   width: 2.5rem;
   height: 2.5rem;
